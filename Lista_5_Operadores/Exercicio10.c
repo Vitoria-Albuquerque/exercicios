@@ -27,7 +27,10 @@ int main(){
 
     delta = (b*b) - (4*a*c);
 
-    if(delta<0){
+    if(a==0){
+        printf("Nao e equacao de segundo grau.");
+    }
+    else if(delta<0){
         printf("Seu delta nao existe, portanto nao tem raizes reais.");
     }
     else if(delta==0){
@@ -43,6 +46,9 @@ int main(){
         raiz2 = (-b - sqrt(delta) ) / (2*a);
 
         printf("Sua equacao so possui duas raizes distintas, que sao: %.2f e %.2f", raiz1, raiz2);
+    }
+    else{
+
     }
 
 
