@@ -44,7 +44,7 @@ int main(){
 
         if (idade < 0) {
             printf("Idade inválida. Por favor, insira uma idade válida.\n");
-            i--; // Decrementa o contador para repetir a pergunta para o mesmo espectador.
+            i--; // Decrementa 
             continue;
         }
 
