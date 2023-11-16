@@ -10,6 +10,40 @@ int main(){
 
 
 
+    char continuar;
+    do {
+        int mes, ano;
+        printf("Digite o mes (1-12): ");
+        scanf("%d", &mes);
+
+        if (mes < 1 || mes > 12) {
+            printf("Mes invalido. Por favor, insira um valor entre 1 e 12.\n");
+            continue;
+        }
+
+        printf("Digite o ano: ");
+        scanf("%d", &ano);
+
+        int diasNoMes;
+
+        if (mes == 2) {
+            if ((ano % 4 == 0 && ano % 100 != 0) || ano % 400 == 0) {
+                diasNoMes = 29; 
+            } else {
+                diasNoMes = 28; 
+            }
+        } else if (mes == 4 || mes == 6 || mes == 9 || mes == 11) {
+            diasNoMes = 30; 
+        } else {
+            diasNoMes = 31; 
+        }
+
+        printf("O mes %d do ano %d tem %d dias.\n", mes, ano, diasNoMes);
+
+        printf("VOCE DESEJA OUTRAS ENTRADAS (S/?)? ");
+        scanf(" %c", &continuar);
+    } while (continuar == 'S' || continuar == 's');
+
 
 
     return 0;
